@@ -1,47 +1,43 @@
-# Insurance Data Analysis
+# Exploratory Data Analysis (EDA) on Customer Purchasing Behavior
 
-This repository provides a comprehensive analysis of an insurance dataset. The analysis includes **data summarization**, **univariate and bivariate analysis**, **geographical trend comparison**, and **outlier detection**. The goal is to understand trends, relationships, and anomalies in the data, helping improve decision-making and insights into insurance practices.
+## Overview
+This project explores customer purchasing behavior in Rossmann stores to understand how factors like promotions, holidays, and competition influence sales. The analysis focuses on cleaning the data, visualizing patterns, and providing insights to support better decision-making.
 
-## Table of Contents
-- [Installation](#installation)
-- [Data Summarization](#data-summarization)
-- [Univariate Analysis](#univariate-analysis)
-- [Bivariate/Multivariate Analysis](#bivariate-multivariate-analysis)
-- [Data Comparison by Geography](#data-comparison-by-geography)
-- [Outlier Detection](#outlier-detection)
-- [License](#license)
+## Data Cleaning
+- **Missing Data**: Handled missing values in `CompetitionDistance`, `PromoInterval`, and other columns with suitable defaults.
+- **Outlier Detection**: Identified and treated outliers in `Sales` and `Customers` to prevent skewed analysis.
+- **Feature Engineering**: Created time-related features such as `day`, `month`, and `holidays` to capture key effects.
 
-## Installation
+## EDA Insights
+- **Promotions**: Promotions generally increased sales, with varying effectiveness across stores.
+- **Holidays**: Sales saw significant spikes during Christmas and Easter.
+- **Sales-Customer Correlation**: A strong correlation was found between the number of customers and sales.
+- **Competitor Impact**: Proximity to competitors slightly reduced sales, especially outside city centers.
 
+## Visualizations
+The analysis includes:
+- Sales trends over time (before, during, and after holidays)
+- Correlation between customers and sales
+- Comparison of sales for stores with and without promotions
+- Impact of competitor distance on sales
+
+## Logging & Reproducibility
+All steps are logged using Python’s `logging` library for traceability. Data cleaning and analysis pipelines are reusable and automated.
+
+## How to Run the Analysis
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/insurance-data-analysis.git
-    cd insurance-data-analysis
+    git clone <repo_url>
     ```
-
-2. Install the required Python packages:
+2. Install dependencies:
     ```bash
     pip install -r requirements.txt
     ```
+3. Run the Jupyter notebook:
+    ```bash
+    jupyter notebook eda_customer_behavior.ipynb
+    ```
 
-    Required packages include:
-    - `pandas`
-    - `matplotlib`
-    - `seaborn`
-    - `numpy`
+---
 
-## Data Summarization
-
-The first step is to calculate **descriptive statistics** and review the **data structure** to understand the variability and formatting of each column.
-
-### Descriptive Statistics
-We calculate variability for numerical features such as:
-- `TotalPremium`
-- `TotalClaims`
-- `SumInsured`
-- `CalculatedPremiumPerTerm`
-
-Example code:
-```python
-# Descriptive statistics
-df.describe()
+This version is formatted as a typical README.md file, making it easy to follow and understand.
