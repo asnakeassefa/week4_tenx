@@ -1,0 +1,23 @@
+# Data manipulation
+pandas
+
+# Numerical computations
+numpy
+
+# Data visualization
+matplotlib
+seaborn
+Flask
+joblib
+# Jupyter Notebook support
+notebook
+
+# Logging
+loguru
+
+# Additional libraries for any specific needs
+scikit-learn
+statsmodels
+
+# Optional: EDA libraries
+sweetviz
