@@ -7,7 +7,8 @@ numpy
 # Data visualization
 matplotlib
 seaborn
-
+Flask
+joblib
 # Jupyter Notebook support
 notebook
 
